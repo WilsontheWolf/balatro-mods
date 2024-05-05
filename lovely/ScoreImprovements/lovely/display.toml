@@ -30,3 +30,10 @@ return (sign < 0 and "-" or "") .. string.format("%.3f",x/(10^fac))..'e'..fac
 match_indent = true
 overwrite = false
 
+[[patches]]
+[patches.regex]
+target = "functions/button_callbacks.lua"
+pattern = "0,(math\\.floor\\(.+?\\)\\))"
+position = "at"
+line_prepend = ""
+payload = "math.min($1, 30)"
