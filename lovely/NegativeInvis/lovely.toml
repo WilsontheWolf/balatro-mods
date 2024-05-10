@@ -1,0 +1,13 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "elseif self.sprite_facing == 'front' then"
+position = "at"
+payload = '''elseif self.sprite_facing == 'front' and not (self.edition and self.edition.negative) then'''
+match_indent = true
+overwrite = false
