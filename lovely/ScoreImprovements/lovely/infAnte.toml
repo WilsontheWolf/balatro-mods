@@ -34,7 +34,7 @@ overwrite = false
 [patches.pattern]
 target = "functions/misc_functions.lua"
 pattern = "amount = amount - amount%(10^math.floor(math.log10(amount)-1))"
-position = "at"
+position = "after"
 payload = '''
 if amount ~= amount then -- Is NaN
     amount = math.huge
