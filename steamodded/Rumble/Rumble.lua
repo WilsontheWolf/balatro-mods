@@ -7,10 +7,7 @@
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
-function SMODS.INIT.Rumble()
-    sendDebugMessage("Rumble Activated!")
-    G.F_RUMBLE = 1.0
-end
+G.F_RUMBLE = 1.0
 
 ----------------------------------------------
 ------------MOD CODE END----------------------
