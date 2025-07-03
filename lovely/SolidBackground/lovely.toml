@@ -1,0 +1,12 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = '''self.TIMERS.REAL_SHADER = G.SETTINGS.reduced_motion and 300 or self.TIMERS.REAL'''
+position = "at"
+payload = '''self.TIMERS.REAL_SHADER = 300'''
+match_indent = true
